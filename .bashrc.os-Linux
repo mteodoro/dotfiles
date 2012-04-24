@@ -1,0 +1,12 @@
+#lose bold colors
+eval `dircolors | sed 's/01/00/g'`
+
+alias ls='ls --color=auto'
+alias view='vim -R'
+
+if [ -z $BASH_COMPLETION ]; then
+    if [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
+fi
+

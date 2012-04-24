@@ -1,0 +1,17 @@
+alias rgrep='grep -r'
+alias ls='ls -G'
+alias ql='qlmanage -p 2>/dev/null'
+
+#include brew stuff
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
+#include local bash_completion
+if [ -f ~/.bash_completion ]; then
+    . ~/.bash_completion
+fi
+
+#Java
+export JAVA_HOME=/Library/Java/Home
+

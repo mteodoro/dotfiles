@@ -1,0 +1,12 @@
+vbell on
+hardstatus alwayslastline
+defscrollback 10000
+altscreen on
+autodetach on
+defflow off
+shell /bin/bash
+
+termcapinfo xterm*|rxvt*|kterm*|Eterm* ti@:te@
+
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m/%d %{W}%c %{g}]'
+
