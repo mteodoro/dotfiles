@@ -21,7 +21,8 @@ Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/pig.vim'
 Bundle 'vim-scripts/SuperTab'
 Bundle 'jpalardy/vim-slime'
-
+Bundle 'vim-scripts/VimClojure'
+Bundle 'mattdenner/vim-scala'
 
 "Bundle 'AutoComplPop'
 if iCanHazVundle == 0
