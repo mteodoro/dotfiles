@@ -19,10 +19,12 @@ Bundle 'gmarik/vundle'
 "Bundle 'Syntastic'
 "let g:syntastic_mode_map['mode'] = 'passive'
 Bundle 'vim-scripts/pig.vim'
-Bundle 'vim-scripts/SuperTab'
+Bundle 'ervandew/supertab'
 Bundle 'jpalardy/vim-slime'
 Bundle 'vim-scripts/VimClojure'
 Bundle 'mattdenner/vim-scala'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/nerdtree'
 
 "Bundle 'AutoComplPop'
 if iCanHazVundle == 0
@@ -111,4 +113,9 @@ set hlsearch
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " " next search
 nnoremap <C-L> :nohl<CR><C-L>
+
+
+set list listchars=tab:\ \ ,trail:·
+
+map <F3> :NERDTreeToggle<CR>
 
