@@ -1,10 +1,49 @@
-set nocompatible
+" % is current filename
+set nocompatible      " We're running Vim, not Vi!
+filetype off
 
-call pathogen#infect()
-syntax on
+let iCanHazVundle=1
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme)
+    echo "Installing Vundle.."
+    echo ""
+    silent !mkdir -p ~/.vim/bundle
+    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+    let iCanHazVundle=0
+endif
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+"Bundle 'Syntastic'
+"let g:syntastic_mode_map['mode'] = 'passive'
+Bundle 'vim-scripts/pig.vim'
+Bundle 'vim-scripts/SuperTab'
+Bundle 'jpalardy/vim-slime'
+
+
+"Bundle 'AutoComplPop'
+if iCanHazVundle == 0
+    echo "Installing Bundles, please ignore key map error messages"
+    echo ""
+    :BundleInstall
+endif
+
+
 filetype plugin indent on
+"
+ " Brief help
+ " :BundleList          - list configured bundles
+ " :BundleInstall(!)    - install(update) bundles
+ " :BundleSearch(!) foo - search(or refresh cache first) for foo
+ " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+ "
+ " see :h vundle for more details or wiki for FAQ
+ " NOTE: comments after Bundle command are not allowed..
 
-syntax on
+""""""""""""""""""""""""""""""""""
+syntax on             " Enable syntax highlighting
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
