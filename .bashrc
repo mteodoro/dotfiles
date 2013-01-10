@@ -64,6 +64,16 @@ if [ -d ~/man ]; then
     export MANPATH=~/man:"${MANPATH}"
 fi
 
+#set up virtualenvwrapper
+if [ -f /usr/local/bin/virtualenvwrapper.sh ] ; then
+    export WORKON_HOME=~/.virtualenvs
+    mkdir -p $WORKON_HOME
+    export PIP_VIRTUALENV_BASE=$WORKON_HOME
+    export PIP_RESPECT_VIRTUALENV=true
+    export PROJECT_HOME=~/dev/scm
+    source /usr/local/bin/virtualenvwrapper_lazy.sh
+fi
+
 #see what screens are running
 if [ $TERM != 'screen' ]; then
     screen -ls | grep -v 'No Sockets found'
