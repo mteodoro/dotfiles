@@ -16,15 +16,30 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
-"Bundle 'Syntastic'
-"let g:syntastic_mode_map['mode'] = 'passive'
-Bundle 'vim-scripts/pig.vim'
+
+"Plugins
+Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/supertab'
 Bundle 'jpalardy/vim-slime'
-Bundle 'vim-scripts/VimClojure'
+"Bundle 'Lokaltog/vim-powerline'
+"Bundle 'Syntastic'
+"let g:syntastic_mode_map['mode'] = 'passive'
+
+"Languages
+Bundle 'kchmck/vim-coffee-script'
+Bundle "https://github.com/tpope/vim-git"
+Bundle "http://github.com/jnwhiteh/vim-golang.git"
+Bundle 'vim-scripts/pig.vim'
 Bundle 'mattdenner/vim-scala'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'scrooloose/nerdtree'
+"Bundle 'vim-scripts/VimClojure'
+Bundle "git://github.com/tpope/vim-foreplay.git"
+Bundle "git://github.com/tpope/vim-classpath.git"
+Bundle "git://github.com/guns/vim-clojure-static.git"
+Bundle "git://github.com/kien/rainbow_parentheses.vim.git"
+au VimEnter *.clj RainbowParenthesesToggle
+au Syntax *.clj RainbowParenthesesLoadRound
+au Syntax *.clj RainbowParenthesesLoadSquare
+au Syntax *.clj RainbowParenthesesLoadBraces
 
 "Bundle 'AutoComplPop'
 if iCanHazVundle == 0
