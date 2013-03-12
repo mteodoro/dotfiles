@@ -12,6 +12,7 @@ if [ -f ~/.bashrc.host ]; then
     . ~/.bashrc.host
 fi
 
+alias utcdate='TZ=UTC date'
 alias ps?='ps ax | grep'
 alias ll='ls -la'
 alias grep='grep --color=auto'
