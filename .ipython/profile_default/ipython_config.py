@@ -203,6 +203,7 @@ c = get_config()
 # 'full' autocall, where all callable objects are automatically called (even if
 # no arguments are present).
 # c.TerminalInteractiveShell.autocall = 0
+c.TerminalInteractiveShell.autocall = 1
 
 # Number of lines of your screen, used to control printing of very long strings.
 # Strings longer than this number of lines will be sent through a pager instead
