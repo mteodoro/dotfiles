@@ -21,6 +21,8 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/supertab'
 Bundle 'jpalardy/vim-slime'
+Bundle 'airblade/vim-gitgutter'
+highlight clear SignColumn
 "Bundle 'Lokaltog/vim-powerline'
 "Bundle 'Syntastic'
 "let g:syntastic_mode_map['mode'] = 'passive'
