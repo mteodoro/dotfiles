@@ -11,7 +11,7 @@ if !filereadable(vundle_readme)
     silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
     let iCanHazVundle=0
 endif
-set rtp+=~/.vim/bundle/vundle/
+set runtimepath+=~/.vim/bundle/vundle/
 call vundle#rc()
 " let Vundle manage Vundle
 " required! 
@@ -21,8 +21,8 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/supertab'
 Bundle 'jpalardy/vim-slime'
-Bundle 'airblade/vim-gitgutter'
-highlight clear SignColumn
+"Bundle 'airblade/vim-gitgutter'
+"highlight clear SignColumn
 "Bundle 'Lokaltog/vim-powerline'
 "Bundle 'Syntastic'
 "let g:syntastic_mode_map['mode'] = 'passive'
@@ -75,16 +75,16 @@ set incsearch		" do incremental searching
 
 set autoindent		" always set autoindenting on
 
-set et
-set ai
-set ts=4
-set sw=4
+set expandtab
+set autoindent
+set tabstop=4
+set shiftwidth=4
 set number
 set showmatch
 
-set sts=4
-set sta
-set bs=2
+set softtabstop=4
+set smarttab
+set backspace=2
 
 
 "set background=light
