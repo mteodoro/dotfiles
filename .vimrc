@@ -31,8 +31,12 @@ Bundle 'jpalardy/vim-slime'
 Bundle 'kchmck/vim-coffee-script'
 Bundle "https://github.com/tpope/vim-git"
 Bundle "http://github.com/jnwhiteh/vim-golang.git"
+let g:gofmt_command = "goimports"
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
+
 Bundle 'vim-scripts/pig.vim'
 Bundle 'mattdenner/vim-scala'
+Bundle 'rodjek/vim-puppet'
 "Bundle 'vim-scripts/VimClojure'
 Bundle "git://github.com/tpope/vim-foreplay.git"
 Bundle "git://github.com/tpope/vim-classpath.git"
