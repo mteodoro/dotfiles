@@ -15,56 +15,56 @@ set runtimepath+=~/.vim/bundle/vundle/
 call vundle#rc()
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 "Plugins
-Bundle 'scrooloose/nerdtree'
-Bundle 'ervandew/supertab'
-Bundle 'jpalardy/vim-slime'
-"Bundle 'airblade/vim-gitgutter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ervandew/supertab'
+Plugin 'jpalardy/vim-slime'
+"Plugin 'airblade/vim-gitgutter'
 "highlight clear SignColumn
-"Bundle 'Lokaltog/vim-powerline'
-"Bundle 'Syntastic'
+"Plugin 'Lokaltog/vim-powerline'
+"Plugin 'Syntastic'
 "let g:syntastic_mode_map['mode'] = 'passive'
 
 "Languages
-Bundle 'kchmck/vim-coffee-script'
-Bundle "https://github.com/tpope/vim-git"
-Bundle "http://github.com/jnwhiteh/vim-golang.git"
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-git'
+Plugin 'jnwhiteh/vim-golang'
 let g:gofmt_command = "goimports"
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
-Bundle 'vim-scripts/pig.vim'
-Bundle 'mattdenner/vim-scala'
-Bundle 'rodjek/vim-puppet'
-"Bundle 'vim-scripts/VimClojure'
-Bundle "git://github.com/tpope/vim-foreplay.git"
-Bundle "git://github.com/tpope/vim-classpath.git"
-Bundle "git://github.com/guns/vim-clojure-static.git"
-Bundle "git://github.com/kien/rainbow_parentheses.vim.git"
+Plugin 'vim-scripts/pig.vim'
+Plugin 'mattdenner/vim-scala'
+Plugin 'rodjek/vim-puppet'
+"Plugin 'vim-scripts/VimClojure'
+Plugin 'tpope/vim-foreplay'
+Plugin 'tpope/vim-classpath'
+Plugin 'guns/vim-clojure-static'
+Plugin 'kien/rainbow_parentheses.vim'
 au VimEnter *.clj RainbowParenthesesToggle
 au Syntax *.clj RainbowParenthesesLoadRound
 au Syntax *.clj RainbowParenthesesLoadSquare
 au Syntax *.clj RainbowParenthesesLoadBraces
 
-"Bundle 'AutoComplPop'
+"Plugin 'AutoComplPop'
 if iCanHazVundle == 0
-    echo "Installing Bundles, please ignore key map error messages"
+    echo "Installing Plugins, please ignore key map error messages"
     echo ""
-    :BundleInstall
+    :PluginInstall
 endif
 
 
 filetype plugin indent on
 "
  " Brief help
- " :BundleList          - list configured bundles
- " :BundleInstall(!)    - install(update) bundles
- " :BundleSearch(!) foo - search(or refresh cache first) for foo
- " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+ " :PluginList          - list configured bundles
+ " :PluginInstall(!)    - install(update) bundles
+ " :PluginSearch(!) foo - search(or refresh cache first) for foo
+ " :PluginClean(!)      - confirm(or auto-approve) removal of unused bundles
  "
  " see :h vundle for more details or wiki for FAQ
- " NOTE: comments after Bundle command are not allowed..
+ " NOTE: comments after Plugin command are not allowed..
 
 """"""""""""""""""""""""""""""""""
 syntax on             " Enable syntax highlighting
