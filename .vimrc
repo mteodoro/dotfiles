@@ -18,8 +18,13 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 
 "Plugins
+Plugin 'Townk/vim-autoclose'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
+let g:SuperTabDefaultCompletionType = "context"
+set omnifunc=syntaxcomplete#Complete
+"set completeopt-=preview
+
 Plugin 'jpalardy/vim-slime'
 "Plugin 'airblade/vim-gitgutter'
 "highlight clear SignColumn
@@ -31,8 +36,11 @@ Plugin 'jpalardy/vim-slime'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-git'
 Plugin 'jnwhiteh/vim-golang'
+"go get code.google.com/p/go.tools/cmd/goimports
 let g:gofmt_command = "goimports"
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
+"go get -u github.com/nsf/gocode
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
 Plugin 'vim-scripts/pig.vim'
 Plugin 'mattdenner/vim-scala'
@@ -111,7 +119,6 @@ augroup filetypedetect
       au BufNewFile,BufRead *.ec,*.EC,*.pc         setf esqlc
       au BufNewFile,BufRead *.pig set filetype=pig syntax=pig 
 augroup END 
-
 
 "testing features
 
