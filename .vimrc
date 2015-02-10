@@ -18,12 +18,13 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 
 "Plugins
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'Townk/vim-autoclose'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 let g:SuperTabDefaultCompletionType = "context"
 set omnifunc=syntaxcomplete#Complete
-"set completeopt-=preview
+set completeopt-=preview
 
 Plugin 'jpalardy/vim-slime'
 "Plugin 'airblade/vim-gitgutter'
@@ -35,18 +36,22 @@ Plugin 'jpalardy/vim-slime'
 "Languages
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-git'
-Plugin 'jnwhiteh/vim-golang'
+
+Plugin 'fatih/vim-go'
+"Plugin 'jnwhiteh/vim-golang'
 "go get code.google.com/p/go.tools/cmd/goimports
-let g:gofmt_command = "goimports"
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
+"let g:gofmt_command = "goimports"
+"autocmd FileType go autocmd BufWritePre <buffer> Fmt
 "go get -u github.com/nsf/gocode
-Plugin 'nsf/gocode', {'rtp': 'vim/'}
+"Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
 Plugin 'vim-scripts/pig.vim'
-Plugin 'mattdenner/vim-scala'
+Plugin 'autowitch/hive.vim'
+Plugin 'derekwyatt/vim-scala'
+"Plugin 'mattdenner/vim-scala'
 Plugin 'rodjek/vim-puppet'
 "Plugin 'vim-scripts/VimClojure'
-Plugin 'tpope/vim-foreplay'
+Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-classpath'
 Plugin 'guns/vim-clojure-static'
 Plugin 'kien/rainbow_parentheses.vim'
@@ -98,10 +103,16 @@ set softtabstop=4
 set smarttab
 set backspace=2
 
+"let g:solarized_termtrans=1
+"let g:solarized_termcolors=256
+""let g:solarized_contrast = 'high'
+"set background=dark
+"colorscheme solarized
 
 "set background=light
 "hi clear
 "syntax reset
+
 
 highlight Normal        guibg=Black guifg=Gray65
 highlight Comment       guifg=DarkGreen ctermfg=DarkGreen
@@ -117,11 +128,12 @@ highlight Type          ctermfg=Blue cterm=none
 
 augroup filetypedetect 
       au BufNewFile,BufRead *.ec,*.EC,*.pc         setf esqlc
-      au BufNewFile,BufRead *.pig set filetype=pig syntax=pig 
+      au BufNewFile,BufRead *.pig set filetype=pig syntax=pig
+      au BufNewFile,BufRead *.hql set filetype=hive syntax=hive
 augroup END 
 
 "testing features
-
+autocmd BufEnter * :syntax sync fromstart
 set pastetoggle=<F2>
 
 " disable arrow keys
@@ -142,8 +154,10 @@ set hlsearch
 " " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
-
+"higlight trailing whitespace
 set list listchars=tab:\ \ ,trail:·
 
 map <F3> :NERDTreeToggle<CR>
+
+cmap w!! w !sudo tee % >/dev/null
 
