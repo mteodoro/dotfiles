@@ -20,11 +20,11 @@ alias quickweb='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
 
 case $TERM in
     xterm*)
-        PS1='[\u@${HOSTNAME} \W]\$ '
+        PS1='[\u@\h \W]\$ '
         PROMPT_COMMAND='echo -ne "\033]0;${HOSTNAME}: ${PWD/#$HOME/~}\007"'
         ;;
     *)
-        PS1='[\u@${HOSTNAME} \W]\$ '
+        PS1='[\u@\h \W]\$ '
         ;;
 esac
 
