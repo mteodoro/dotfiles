@@ -18,7 +18,7 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 
 "Plugins
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'jpalardy/vim-slime'
 Plugin 'Townk/vim-autoclose'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
@@ -26,17 +26,10 @@ let g:SuperTabDefaultCompletionType = "context"
 set omnifunc=syntaxcomplete#Complete
 set completeopt-=preview
 
-Plugin 'jpalardy/vim-slime'
-"Plugin 'airblade/vim-gitgutter'
-"highlight clear SignColumn
-"Plugin 'Lokaltog/vim-powerline'
-"Plugin 'Syntastic'
-"let g:syntastic_mode_map['mode'] = 'passive'
 
 "Languages
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-git'
-
+Plugin 'smerrill/vcl-vim-plugin'
 Plugin 'fatih/vim-go'
 "Plugin 'jnwhiteh/vim-golang'
 "go get code.google.com/p/go.tools/cmd/goimports
@@ -44,21 +37,6 @@ Plugin 'fatih/vim-go'
 "autocmd FileType go autocmd BufWritePre <buffer> Fmt
 "go get -u github.com/nsf/gocode
 "Plugin 'nsf/gocode', {'rtp': 'vim/'}
-
-Plugin 'vim-scripts/pig.vim'
-Plugin 'autowitch/hive.vim'
-Plugin 'derekwyatt/vim-scala'
-"Plugin 'mattdenner/vim-scala'
-Plugin 'rodjek/vim-puppet'
-"Plugin 'vim-scripts/VimClojure'
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-classpath'
-Plugin 'guns/vim-clojure-static'
-Plugin 'kien/rainbow_parentheses.vim'
-au VimEnter *.clj RainbowParenthesesToggle
-au Syntax *.clj RainbowParenthesesLoadRound
-au Syntax *.clj RainbowParenthesesLoadSquare
-au Syntax *.clj RainbowParenthesesLoadBraces
 
 "Plugin 'AutoComplPop'
 if iCanHazVundle == 0
