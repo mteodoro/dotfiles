@@ -26,17 +26,12 @@ let g:SuperTabDefaultCompletionType = "context"
 set omnifunc=syntaxcomplete#Complete
 set completeopt-=preview
 
-
 "Languages
 Plugin 'tpope/vim-git'
 Plugin 'smerrill/vcl-vim-plugin'
 Plugin 'fatih/vim-go'
-"Plugin 'jnwhiteh/vim-golang'
-"go get code.google.com/p/go.tools/cmd/goimports
-"let g:gofmt_command = "goimports"
-"autocmd FileType go autocmd BufWritePre <buffer> Fmt
-"go get -u github.com/nsf/gocode
-"Plugin 'nsf/gocode', {'rtp': 'vim/'}
+"use :GoInstallBinaries to add goimports, etc
+let g:go_fmt_command = "goimports"
 
 "Plugin 'AutoComplPop'
 if iCanHazVundle == 0
