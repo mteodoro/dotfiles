@@ -7,9 +7,9 @@ if [ -f ~/.bashrc.os-`uname -s` ]; then
     . ~/.bashrc.os-`uname -s`
 fi
 
-#host-specific stuff
-if [ -f ~/.bashrc.host ]; then
-    . ~/.bashrc.host
+#local stuff
+if [ -f ~/.bashrc.local ]; then
+    . ~/.bashrc.local
 fi
 
 alias utcdate='TZ=UTC date'
