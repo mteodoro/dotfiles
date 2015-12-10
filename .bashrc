@@ -75,8 +75,19 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ] ; then
     source /usr/local/bin/virtualenvwrapper_lazy.sh
 fi
 
-#see what screens are running
-if [ $TERM != 'screen' ]; then
+if [ "$TERM" = "screen" ]; then
+    alias fixssh='source ~/.ssh/sshenv'
+    source ~/.ssh/sshenv
+else
+    #fix ssh env
+    SSHVARS="SSH_CLIENT SSH_TTY SSH_AUTH_SOCK SSH_CONNECTION DISPLAY"
+    for x in ${SSHVARS} ; do
+        (eval echo $x=\$$x) | sed  's/=/="/
+                                    s/$/"/
+                                    s/^/export /'
+    done 1>$HOME/.ssh/sshenv
+
+    #see what screens are running
     screen -ls | grep -v 'No Sockets found'
 fi
 
