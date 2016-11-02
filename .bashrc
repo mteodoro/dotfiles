@@ -38,11 +38,7 @@ shopt -s histappend
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 export PYTHONSTARTUP=~/.python
 
-#/usr/local stuff
-if [ -d /usr/local/bin ]; then
-    export PATH=/usr/local/bin:"${PATH}"
-fi
-
+#manpath stuff
 if [ -d /usr/local/man ]; then
     export MANPATH=/usr/local/man:"${MANPATH}"
 fi
